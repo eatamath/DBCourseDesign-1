@@ -13,4 +13,10 @@
     <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="2.19.3" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <Folder Include="wwwroot\image\" />
+    <Folder Include="wwwroot\avatar\" />
+  </ItemGroup>
+
 </Project>
