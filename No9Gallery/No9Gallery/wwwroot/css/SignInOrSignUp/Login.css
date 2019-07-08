@@ -1,0 +1,11 @@
+﻿body {
+    background-color: #FAFAFA;
+    font-family: 'Google Sans';
+    color: #112D4E;
+}
+
+
+.LoginTitle{
+    font-size:40px;
+    font-weight:600;
+}

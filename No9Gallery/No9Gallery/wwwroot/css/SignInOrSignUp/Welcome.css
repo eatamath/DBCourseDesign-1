@@ -1,0 +1,15 @@
+body{
+    background-color: #FFFFFF;
+    font-family: 'Google Sans';
+    color: #112D4E;
+}
+
+.SignInOrSignUp{
+    font-size: 18px;
+    opacity: 0.6;
+}
+
+.title{
+    font-size:48px;
+    font-weight: 600;
+}
