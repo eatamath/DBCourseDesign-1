@@ -31,7 +31,7 @@ namespace No9Gallery.Controllers
         {
             if (ModelState.IsValid && !string.IsNullOrEmpty(user.ID) && !string.IsNullOrEmpty(user.Password))
             {
-                var getUser = _loginService.CheckLogin(user.ID, user.Password);
+                var getUser = await _loginService.CheckLogin(user.ID, user.Password);
 
                 if (getUser != null)
                 {
