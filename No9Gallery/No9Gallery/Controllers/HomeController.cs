@@ -15,7 +15,7 @@ namespace No9Gallery.Controllers
         public IActionResult Index()
         {
 
-            
+        
             return View();
         }
 
