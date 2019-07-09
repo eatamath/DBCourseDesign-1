@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sign In</title>
+    <title>系统登录</title>
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     </environment>
@@ -33,12 +33,12 @@
             <form asp-controller="Login" asp-action="Index" method="post">
                 <span class="text-danger" style="position:absolute; top:370px; left:540px">@ViewBag.ErrorInfo</span>
                 <div class="form-group has-feedback">
-                    <input asp-for="ID" type="text" class="form-control" style="position:absolute; left:540px; top: 400px; width: 320px" placeholder="User_ID">
+                    <input asp-for="ID" type="text" class="form-control" style="position:absolute; left:540px; top: 400px; width: 300px" placeholder="User_ID">
                     <!-- <span class="glyphicon glyphicon-user form-control-feedback"></span> -->
                     <span asp-validation-for="ID" class="text-danger"></span>
                 </div>
                 <div class="form-group has-feedback">
-                    <input asp-for="Password" type="password" class="form-control" style="position:absolute; left:540px; top: 450px; width: 320px" placeholder="Password">
+                    <input asp-for="Password" type="password" class="form-control" style="position:absolute; left:540px; top: 450px; width: 300px" placeholder="Password">
                     <!-- <span class="glyphicon glyphicon-lock form-control-feedback"></span> -->
                 </div>
                 <div class="row">
