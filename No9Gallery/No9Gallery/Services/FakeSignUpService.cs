@@ -38,8 +38,9 @@ namespace No9Gallery.Services
             return Task.FromResult(isExist);
         }
 
-        public async Task SignUpAsync(SignUpUser signUpUser)
+        public async Task<bool> SignUpAsync(SignUpUser signUpUser)
         {
+            bool success = false;
             using (OracleConnection con = new OracleConnection(ConString.conString))
             {
                 using (OracleCommand cmd = con.CreateCommand())
@@ -65,6 +66,8 @@ namespace No9Gallery.Services
                             + 0 + ")";
 
                         await cmd.ExecuteNonQueryAsync();
+
+                        success = true;
                     }
                     catch (Exception ex)
                     {
@@ -74,6 +77,7 @@ namespace No9Gallery.Services
                 }
 
             }
+            return success;
         }
     }
 }

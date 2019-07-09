@@ -10,6 +10,6 @@ namespace No9Gallery.Services
     {
         Task<bool> CheckId(string signId);
 
-        Task SignUpAsync(SignUpUser signUpUser);
+        Task<bool> SignUpAsync(SignUpUser signUpUser);
     }
 }
