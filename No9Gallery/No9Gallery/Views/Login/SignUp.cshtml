@@ -1,15 +1,16 @@
-﻿
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
 @{
-    ViewData["Title"] = "Login";
     Layout = null;
 }
 
-@model LoginUser
+@model SignUpUser
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sign In</title>
+    <title>Sign Up</title>
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     </environment>
@@ -21,30 +22,34 @@
               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
     </environment>
     <link rel="stylesheet" href="~/css/site.css" />
-    <link rel="stylesheet" href="~/css/SignInOrSignUp/Login.css" />
+    <link rel="stylesheet" href="~/css/SignInOrSignUp/SignUp.css" />
 </head>
+
 <body>
     <div>
-        <img src="~/image/SignInOrSignUp/WelcomeLogin.png" style="position:absolute; left:840px; top: 120px" />
-        <div class="LoginTitle" style="position:absolute; top:285px; left:540px">
-            <span>Sign In</span>
+        <div class="SignUpTitle" style="position:absolute; top:180px; left:780px">
+            <span>Sign Up</span>
         </div>
         <div class="login-box-body">
-            <form asp-controller="Login" asp-action="Index" method="post">
-                <span class="text-danger" style="position:absolute; top:370px; left:540px">@ViewBag.ErrorInfo</span>
+            <form asp-controller="SignUp" asp-action="Index" method="post">
+                <span class="text-danger" style="position:absolute; top:270px; left:780px">@ViewBag.ErrorInfo</span>
                 <div class="form-group has-feedback">
-                    <input asp-for="ID" type="text" class="form-control" style="position:absolute; left:540px; top: 400px; width: 320px" placeholder="User_ID">
-                    <!-- <span class="glyphicon glyphicon-user form-control-feedback"></span> -->
+                    <input asp-for="ID" type="text" class="form-control" style="position:absolute; left:780px; top: 300px; width: 360px" placeholder="YourID">
                     <span asp-validation-for="ID" class="text-danger"></span>
                 </div>
                 <div class="form-group has-feedback">
-                    <input asp-for="Password" type="password" class="form-control" style="position:absolute; left:540px; top: 450px; width: 320px" placeholder="Password">
-                    <!-- <span class="glyphicon glyphicon-lock form-control-feedback"></span> -->
+                    <input asp-for="Name" type="text" class="form-control" style="position:absolute; left:780px; top: 360px; width: 360px" placeholder="YourName">
+                </div>
+                <div class="form-group has-feedback">
+                    <input asp-for="Password" type="password" class="form-control" style="position:absolute; left:780px; top: 420px; width: 360px" placeholder="Password">
+                </div>
+                <div class="form-group has-feedback">
+                    <input asp-for="CheckPassword" type="password" class="form-control" style="position:absolute; left:780px; top: 480px; width: 360px" placeholder="RepeatPassword">
                 </div>
                 <div class="row">
                     <!-- /.col -->
                     <div class="col-xs-4">
-                        <button type="submit" class="btn btn-primary btn-block btn-flat" style="position:absolute; left:540px; top: 525px; width: 120px">Sign In</button>
+                        <button type="submit" class="btn btn-primary btn-block btn-flat" style="position:absolute; left:780px; top: 570px; width: 120px">Sign Up</button>
                     </div>
                     <!-- /.col -->
                 </div>
@@ -63,8 +68,7 @@
                 increaseArea: '20%' // optional
             });
         });</script>
+
 </body>
+
 </html>
-
-
-
