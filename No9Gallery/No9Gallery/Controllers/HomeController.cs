@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity;
 using No9Gallery.Models;
 
 namespace No9Gallery.Controllers
@@ -14,8 +16,7 @@ namespace No9Gallery.Controllers
         [Authorize]
         public IActionResult Index()
         {
-
-        
+            string s = User.FindFirst(ClaimTypes.Name).Value;
             return View();
         }
 

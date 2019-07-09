@@ -15,7 +15,7 @@ namespace No9Gallery.Services
     public class FakeLoginService: ILoginServiceInterface
     {
 
-        public LoginUser CheckLogin(string ID, string password)
+        public async Task<LoginUser> CheckLogin(string ID, string password)
         {
 
             string getID, getName, getAvatar, getStatus;

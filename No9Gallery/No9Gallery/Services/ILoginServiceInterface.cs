@@ -8,6 +8,6 @@ namespace No9Gallery.Services
 {
     public interface ILoginServiceInterface
     {
-        LoginUser CheckLogin(string ID, string password);
+        Task<LoginUser> CheckLogin(string ID, string password);
     }
 }
