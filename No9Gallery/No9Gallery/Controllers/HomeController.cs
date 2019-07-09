@@ -13,10 +13,10 @@ namespace No9Gallery.Controllers
 {
     public class HomeController : Controller
     {
-        [Authorize]
+        //[Authorize]
         public IActionResult Index()
         {
-            string s = User.FindFirst(ClaimTypes.Name).Value;
+            //string s = User.FindFirst(ClaimTypes.Name).Value;
             return View();
         }
 

@@ -6,8 +6,10 @@ using No9Gallery.Models;
 
 namespace No9Gallery.Services
 {
-    public interface ILoginService
+    public interface ISignUpService
     {
-        Task<LoginUser> CheckLogin(string ID, string password);
+        Task<bool> CheckId(string signId);
+
+        Task<bool> SignUpAsync(SignUpUser signUpUser);
     }
 }
